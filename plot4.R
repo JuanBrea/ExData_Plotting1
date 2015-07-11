@@ -10,7 +10,9 @@ pwr1<-pwr[pwr$Date == as.Date("2007-02-01") | pwr$Date == as.Date("2007-02-02"),
 
 ## Make plot, annotate it and save it to a file
 ## There will be 4 plots: 2 rows and 2 columns
+windows()
 par(mfrow = c(2,2))
+par("bg"="white")
 
 ## Make plot, annotate it and save it to a file
 
@@ -20,6 +22,7 @@ T<-strptime(paste(as.character(pwr1$Date),pwr1$Time), format="%Y-%m-%d %H:%M:%S"
 
 ##Plot 1,1
 ## tyle = "l" so points are joined by a line
+
 plot(T,as.numeric(pwr1$Global_active_power),  type="l", main = " ", xlab = " ", ylab = "Global Active Power (Kilowats")
 
 ##Plot 1,2
